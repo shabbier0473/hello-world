@@ -22,6 +22,14 @@
   </modules>
 
   <distributionManagement>
+   <snapshotRepository>
+      <id>deployment</id>
+      <url>http://107.23.139.182:8081/repository/shabbir/</url>
+   </snapshotRepository>
+    <snapshotRepository>
+      <id>release</id>
+      <url>http://107.23.139.182:8081/repository/release/</url>
+   </snapshotRepository>       
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
