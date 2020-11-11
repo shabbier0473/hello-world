@@ -22,10 +22,10 @@ jobs:
     steps:
     - name: Deploy App1
       if: github.event.inputs.name == 'App1'
-      run: echo "Hello ${{ github.event.inputs.name }}"
+      run: echo "Hello ${{ github.event.inputs.App1 }}"
   App2:
     runs-on: ubuntu-latest
     steps:
     - name: Deploy App2
       if: github.event.inputs.name == 'App2'
-      run: echo "Hello ${{ github.event.inputs.name }}"
+      run: echo "Hello ${{ github.event.inputs.App2 }}"
