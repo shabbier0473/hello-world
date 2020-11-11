@@ -5,14 +5,10 @@ on:
     inputs:
       App1:
         description: 'App1' 
-        required: true
-      tags:
-        description: 'App to deploy' 
+        required: true 
       App2:
         description: 'App2' 
         required: true
-      tags:
-        description: 'App to deploy' 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   printInputs:
