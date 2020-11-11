@@ -1,0 +1,14 @@
+name: deployment
+on:
+  deployment
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Dump GitHub context
+       env:
+          GITHUB_CONTEXT: ${{ tojson(github) }}
+          ENVIRONMENT: ${{ github.event.deployment.environment }}
+       run: |
+          echo "$GITHUB_CONTEXT"
+          echo $ENVIRONMENT
