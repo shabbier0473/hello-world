@@ -14,6 +14,6 @@ jobs:
     - name: Deploy App1
       if: github.event.inputs.name == 'one'
       run: echo "Hello ${{ github.event.inputs.name }}"
-      if: github.event.inputs.name == 'Two'
+      if: false == github.event.inputs.name == 'Two'
       run: echo "Hello ${{ github.event.inputs.name }}" 
     
