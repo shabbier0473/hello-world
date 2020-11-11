@@ -5,15 +5,13 @@ on:
     inputs:
       name:
         description: 'App1'
+        default: 'App1' 
         required: true
-      name:
-        description: 'App2'
-        required: true  
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   App1:
     runs-on: ubuntu-latest
     steps:
     - name: Deploy App1
+      if: github.event.inputs.name == 'App1'
       run: echo "Hello ${{ github.event.inputs.name }}"
